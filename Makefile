@@ -9,6 +9,9 @@ linked_modules/@prezly/slate/build: linked_modules/@prezly/slate/node_modules
 
 linked_modules/@prezly/slate/node_modules: linked_modules/@prezly/slate
 	cd linked_modules/@prezly/slate && npm run bootstrap
+	# Patch linked module to explicitly react@18
+	cd linked_modules/@prezly/slate && npm add react@18 react-dom@18
+	cd linked_modules/@prezly/slate && npm rm react -w packages/slate-commons && npm add react@18 -w packages/slate-commons
 
 linked_modules/@prezly/slate: linked_modules/@prezly
 	git clone git@github.com:prezly/slate.git linked_modules/@prezly/slate
