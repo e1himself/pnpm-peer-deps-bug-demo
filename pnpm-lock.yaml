@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+overrides:
+  react: '18'
+  react-dom: '18'
+
 dependencies:
   react:
     specifier: '18'
