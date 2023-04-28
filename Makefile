@@ -1,6 +1,6 @@
 .PHONY: pnpm-link
 
-pnpm-link: linked_modules/@prezly/slate/build
+pnpm-link: node_modules linked_modules/@prezly/slate/build
 	pnpm link ./linked_modules/@prezly/slate/packages/slate-types
 	pnpm link ./linked_modules/@prezly/slate/packages/slate-commons
 
@@ -15,3 +15,6 @@ linked_modules/@prezly/slate: linked_modules/@prezly
 
 linked_modules/@prezly:
 	mkdir -p linked_modules/@prezly
+
+node_modules:
+	pnpm install
