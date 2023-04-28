@@ -4,7 +4,7 @@ See https://github.com/pnpm/pnpm/issues/6484
 
 # Reproduction steps
 
-Just run `make` in the root:
+Just run `make` in the root (requires GNU environment):
 
 ```
 make
